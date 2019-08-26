@@ -19,6 +19,45 @@ cd ~/catkin_ws && catkin_make
 
 . ./devel/setup.bash
 
+************************** TO RECOVER FROM FAIL **********************
+cd
+
+rm -rf catkin_ws/
+
+./setupCatkinWorkspace.sh
+
+. ~/.bashrc
+
+cd catkin_ws/
+
+sudo apt-get install ros-melodic-ar-track-alvar-msgs
+
+sudo apt autoremove
+
+sudo apt-get install ros-melodic-turtlebot3
+
+sudo apt-get install ros-melodic-turtlebot3-applications
+
+cd src/
+
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+
+cd ..
+
+sudo apt-get install ros-melodic-gazebo-ros
+
+sudo apt-get install ros-melodic-gazebo-dev
+
+sudo apt-get install ros-melodic-gazebo-msgs
+
+catkin_make
+
+source ./devel/setup.bash
+
+**********************************************************************
+
 
 **START**
 
