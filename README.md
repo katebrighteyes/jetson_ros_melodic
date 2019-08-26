@@ -13,7 +13,8 @@ sudo apt update
 sudo apt install ros-melodic-desktop
 
 
-참고 혹시 설치 관련 오류가 나면
+
+*참고 혹시 설치 관련 오류가 나면
 
 ps -ef | grep apt
 
@@ -30,7 +31,8 @@ sudo rm /var/lib/dpkg/lock
 sudo apt install ros-melodic-desktop
 
 
-의존성 설치 및 추가 패키지 설치
+
+*의존성 설치 및 추가 패키지 설치
 
 sudo rosdep init 
 
@@ -44,6 +46,8 @@ sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setu
 
 
 최종 환경 설정
+
+mkdir catkin_ws
 
 cd ~/catkin_ws/
 
