@@ -1,8 +1,13 @@
 * Modify ~/.bashrc 
 export ROS_IP=192.168.101.20 <= modify to your IP
 
+**Refer this site**
+
 https://github.com/ROBOTIS-GIT/turtlebot3
 
+** Download src and build **
+
+cd ~/catkin_ws/src/
 
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
