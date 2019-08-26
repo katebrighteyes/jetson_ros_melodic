@@ -4,7 +4,7 @@ export ROS_IP=192.168.101.20 <= modify to your IP
 https://github.com/ROBOTIS-GIT/turtlebot3
 
 
-  133  git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 
@@ -14,10 +14,16 @@ cd ~/catkin_ws && catkin_make
 
 . ./devel/setup.bash
 
+
+**START**
+
 export TURTLEBOT3_MODEL=burger
+
 roslaunch turtlebot3_fake turtlebot3_fake.launch
 
 -----------------------------------------
+**another terminal **
+
 export TURTLEBOT3_MODEL=burger
 
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
@@ -36,6 +42,7 @@ space key, s : force stop
 
 
 ===============================================
+**EXERCISE**
 
 rqt_graph
 
