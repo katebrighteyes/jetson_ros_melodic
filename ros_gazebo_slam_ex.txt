@@ -92,7 +92,14 @@ https://newscrewdriver.com/2018/08/11/running-turtlebot3-mapping-demonstration-w
 3. turtlebot3_teleop
 
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
- TurtleBot3 Simulation Node
+
+*** COMPLETE MAP BY TRAVELIONG WITH TELEOP
+** THEN YOU HAVE TO SAVE A MAP FILE !!!!!!
+
+
+rosrun map_server map_saver -f ~/map
+ 
+ 
 
 3. check rqt_graph
 $ rqt_graph 
