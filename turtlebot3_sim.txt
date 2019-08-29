@@ -1,6 +1,8 @@
 * Modify ~/.bashrc 
 export ROS_IP=192.168.101.20 <= modify to your IP
 
+export ROS_MASTER_URI=http://192.168.101.20:11311
+
 **Refer this site**
 
 https://github.com/ROBOTIS-GIT/turtlebot3
