@@ -51,11 +51,7 @@ mkdir catkin_ws
 
 cd ~/catkin_ws/
 
-catkin_make
-
 mkdir -p ~/catkin_ws/src 
-
-cd ~/catkin_ws/
 
 catkin_make
 
@@ -88,12 +84,17 @@ ls
 [TEST]
 
 1) EXECUTE roscore 
+창을 새로 띄운 후 roscore 실행 
 
 $ roscore
 
 2) turtle
+또 다른 창에서 거북이 창 실행
+
 $ rosrun turtlesim turtlesim_node
 
 3) move
+또 다른 창에서 키 동작 오퍼 기능 실행
+
 $ rosrun turtlesim turtle_teleop_key
 
