@@ -1,6 +1,6 @@
 # ros_melodic
 
-Melodic for Nano
+# Melodic for Nano
 
 설치
 
@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install ros-melodic-desktop
 
 
-
+*****************************************************
 *참고 혹시 설치 관련 오류가 나면
 
 ps -ef | grep apt
@@ -24,12 +24,11 @@ sudo apt install ros-melodic-desktop
 
 sudo rm /var/lib/dpkg/lock-frontend
 
-sudo apt install ros-melodic-desktop
-
 sudo rm /var/lib/dpkg/lock
 
 sudo apt install ros-melodic-desktop
 
+**********************************
 
 
 *의존성 설치 및 추가 패키지 설치
@@ -60,7 +59,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 ---------------------------------------------------------------------------
-**Melodic for Xavier, TX2 (Jetpack 4.2.1)
+# Melodic for Xavier, TX2 (Jetpack 4.2.1)
 ---------------------------------------------------------------------------
 
 설치
