@@ -1,0 +1,108 @@
+* Modify ~/.bashrc 
+export ROS_IP=192.168.101.20 <= modify to your IP
+
+export ROS_MASTER_URI=http://192.168.101.20:11311
+
+**Refer this site**
+
+https://github.com/ROBOTIS-GIT/turtlebot3
+
+====================================
+install 
+====================================
+
+cd
+
+rm -rf catkin_ws/
+
+./setupCatkinWorkspace.sh
+
+. ~/.bashrc
+
+cd catkin_ws/
+
+sudo apt-get install ros-melodic-ar-track-alvar-msgs
+
+sudo apt autoremove
+
+sudo apt-get install ros-melodic-turtlebot3
+
+sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan ros-melodic-rosserial-arduino ros-melodic-rosserial-python ros-melodic-rosserial-server ros-melodic-rosserial-client ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro ros-melodic-compressed-image-transport ros-melodic-rqt-image-view ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
+
+--------------
+
+sudo apt-get install ros-melodic-turtlebot3-*
+sudo apt-get install ros-melodic-gazebo
+sudo apt-get install ros-melodic-turtlebot3-gazebo
+sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control
+sudo apt install ros-melodic-slam-gmapping 
+--------------------------------
+
+** Download src and build **
+
+cd ~/catkin_ws/src/
+
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
+cd ~/catkin_ws && catkin_make
+
+. ./devel/setup.bash
+
+************************** TO RECOVER FROM FAIL **********************
+
+cd ..
+
+sudo apt-get install ros-melodic-gazebo-ros
+
+sudo apt-get install ros-melodic-gazebo-dev
+
+sudo apt-get install ros-melodic-gazebo-msgs
+
+catkin_make
+
+source ./devel/setup.bash
+
+**********************************************************************
+
+
+**START**
+
+export TURTLEBOT3_MODEL=burger
+
+roslaunch turtlebot3_fake turtlebot3_fake.launch
+
+-----------------------------------------
+**another terminal **
+
+export TURTLEBOT3_MODEL=burger
+
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+
+===============================================
+**EXERCISE**
+
+rqt_graph
+
+===============================================
+
+rostopic list
+rostopic echo /cmd_vel
+
+
