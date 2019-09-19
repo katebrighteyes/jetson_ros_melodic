@@ -55,6 +55,9 @@ rospack find usb_cam
 
 sudo apt-get install ros-melodic-image-view
 
+
+source ~/catkin_ws/devel/setup.bash
+
 [1]
 
 $ roscore
