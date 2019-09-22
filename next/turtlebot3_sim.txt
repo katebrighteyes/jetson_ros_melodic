@@ -1,19 +1,32 @@
-* Modify ~/.bashrc 
+# Siumulation on Jetson !!
+
+***********************
+** YOU HAVE TO Modify ~/.bashrc if yout Jetson IP is changed !!
+
 export ROS_IP=192.168.101.20 <= modify to your IP
 
 export ROS_MASTER_URI=http://192.168.101.20:11311
 
-**Refer this site**
+**And you can Refer this site for this exercise if you want.**
 
 https://github.com/ROBOTIS-GIT/turtlebot3
+*************************
 
 ====================================
-install 
+# installation for this Exercise
 ====================================
+
+* prepare your catkin_ws
 
 cd
 
-rm -rf catkin_ws/
+rm -rf catkin_ws/ 
+
+or 
+
+mv catkin_ws/ catkin_ws_1/
+
+cd ~/installROSXavier
 
 ./setupCatkinWorkspace.sh
 
