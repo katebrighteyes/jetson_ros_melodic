@@ -63,12 +63,12 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 $ rqt_graph 
 
 ====================================
-2) by drive
+2) by drive simulationm
 ====================================
 1. world gazebo
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
-2. teleop
+2. simulation
 roslaunch turtlebot3_gazebo turtlebot3_simulation.launch
 
 3. check rqt_graph
