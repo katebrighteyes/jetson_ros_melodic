@@ -18,20 +18,16 @@ https://github.com/ROBOTIS-GIT/turtlebot3
 ====================================
 *****************************************************
 * 2.1 prepare your catkin_ws
+$ cd
+$ rm -rf catkin_ws/
+<< OR >>
+$ mv catkin_ws/ catkin_ws_1/
+$ cd ~/installROSXavier
+$ ./setupCatkinWorkspace.sh
 
-cd
+** Check yout ~/.bashrc if there are duplicated lines.
+** And source ~/.bashrc
 
-rm -rf catkin_ws/ 
-
-or 
-
-mv catkin_ws/ catkin_ws_1/
-
-cd ~/installROSXavier
-
-./setupCatkinWorkspace.sh
-
-. ~/.bashrc
 *******************************************************
 
 cd catkin_ws/
@@ -47,7 +43,7 @@ $ setup_SimulJetson.sh
 
 ** Download src and build **
 
-cd ~/catkin_ws/src/
+$ cd ~/catkin_ws/src/
 
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 
@@ -55,9 +51,9 @@ $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
-cd ~/catkin_ws && catkin_make
+$ cd ~/catkin_ws && catkin_make
 
-. ./devel/setup.bash
+$ . ./devel/setup.bash
 
 **********************************************************************
 
