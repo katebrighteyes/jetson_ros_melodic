@@ -41,7 +41,7 @@ $ ./setup_SimulJetson.sh
 
 --------------------------------
 
-** Download src and build **
+*2.3 Download src and build **
 
 $ cd ~/catkin_ws/src/
 
@@ -54,9 +54,13 @@ $ cd ~/catkin_ws && catkin_make
 $ source ./devel/setup.bash
 
 **********************************************************************
+============================================
 
+# 3  START Simulation**
 
-**START**
+============================================
+
+* 3.1 roslaunch turtlebot
 
 export TURTLEBOT3_MODEL=burger
 
@@ -83,13 +87,19 @@ space key, s : force stop
 
 
 ===============================================
-**EXERCISE**
+**3.2 relationship **
 
-rqt_graph
+$ rqt_graph
 
 ===============================================
+* 3.3 Check Topic
+$ rostopic list
 
-rostopic list
-rostopic echo /cmd_vel
+* 3.4 Check echo
+$ rostopic echo /cmd_vel
+$ rostopic echo /odom
+
+* 3.5
+$ rosrun rqt_tf_tree rqt_tf_tree
 
 
