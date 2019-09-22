@@ -1,7 +1,8 @@
 # Siumulation on Jetson !!
 
 ***********************
-** YOU HAVE TO Modify ~/.bashrc if yout Jetson IP is changed !!
+# 1. CHECK IP
+* YOU HAVE TO Modify ~/.bashrc if yout Jetson IP is changed !!
 
 export ROS_IP=192.168.101.20 <= modify to your IP
 
@@ -13,10 +14,10 @@ https://github.com/ROBOTIS-GIT/turtlebot3
 *************************
 
 ====================================
-# installation for this Exercise
+# 2. installation for this Exercise
 ====================================
-
-* prepare your catkin_ws
+*****************************************************
+* 2.1 prepare your catkin_ws
 
 cd
 
@@ -31,24 +32,17 @@ cd ~/installROSXavier
 ./setupCatkinWorkspace.sh
 
 . ~/.bashrc
+*******************************************************
 
 cd catkin_ws/
+********************************************************
+* 2.2 Install START *
 
-sudo apt-get install ros-melodic-ar-track-alvar-msgs
+Make your setup_SimulJetson.sh.
+chmod 777 setup_SimulJetson.sh
+RUN !!
+$ setup_SimulJetson.sh
 
-sudo apt autoremove
-
-sudo apt-get install ros-melodic-turtlebot3
-
-sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan ros-melodic-rosserial-arduino ros-melodic-rosserial-python ros-melodic-rosserial-server ros-melodic-rosserial-client ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro ros-melodic-compressed-image-transport ros-melodic-rqt-image-view ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
-
---------------
-
-sudo apt-get install ros-melodic-turtlebot3-*
-sudo apt-get install ros-melodic-gazebo
-sudo apt-get install ros-melodic-turtlebot3-gazebo
-sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control
-sudo apt install ros-melodic-slam-gmapping 
 --------------------------------
 
 ** Download src and build **
@@ -64,20 +58,6 @@ $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/catkin_ws && catkin_make
 
 . ./devel/setup.bash
-
-************************** TO RECOVER FROM FAIL **********************
-
-cd ..
-
-sudo apt-get install ros-melodic-gazebo-ros
-
-sudo apt-get install ros-melodic-gazebo-dev
-
-sudo apt-get install ros-melodic-gazebo-msgs
-
-catkin_make
-
-source ./devel/setup.bash
 
 **********************************************************************
 
