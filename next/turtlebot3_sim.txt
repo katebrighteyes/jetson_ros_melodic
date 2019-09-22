@@ -37,7 +37,7 @@ cd catkin_ws/
 Make your setup_SimulJetson.sh.
 chmod 777 setup_SimulJetson.sh
 RUN !!
-$ setup_SimulJetson.sh
+$ ./setup_SimulJetson.sh
 
 --------------------------------
 
