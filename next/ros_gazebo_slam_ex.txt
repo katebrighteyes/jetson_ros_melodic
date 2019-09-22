@@ -93,6 +93,11 @@ https://newscrewdriver.com/2018/08/11/running-turtlebot3-mapping-demonstration-w
 
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
+OR YOU CAN USE
+
+$ roslaunch turtlebot3_gazebo turtlebot3_simulation.launch
+
+------------------
 *** COMPLETE MAP BY TRAVELIONG WITH TELEOP
 ** THEN YOU HAVE TO SAVE A MAP FILE !!!!!!
 
