@@ -17,7 +17,7 @@ https://github.com/ROBOTIS-GIT/turtlebot3
 # 2. installation for this Exercise
 ====================================
 *****************************************************
-* 2.1 prepare your catkin_ws
+* 2.1 prepare your catkin_ws (If you want)
 $ cd
 $ rm -rf catkin_ws/
 << OR >>
