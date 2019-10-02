@@ -1,1 +1,6 @@
 
+sudo apt-get purge ros-*
+
+sudo apt-get autoremove
+
+*remove setting of ROS from .bashrc file.
