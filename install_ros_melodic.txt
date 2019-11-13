@@ -1,0 +1,75 @@
+* After Install Jetson Inference
+
+ROS Core
+Install the ros-melodic-ros-base or ros-kinetic-ros-base package on your Jetson following these directions:
+
+*************************************************************************
+ROS Melodic (JetPack 4.2) - ROS Install Instructions
+
+--------------------------------------------------
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+
+sudo apt update
+
+sudo apt install ros-melodic-desktop
+
+-----------------
+
+sudo rosdep init
+rosdep update
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+*************************************************************************
+Depending on which version of ROS you're using, install some additional dependencies:
+
+ROS Melodic
+$ sudo apt-get install ros-melodic-image-transport
+$ sudo apt-get install ros-melodic-image-publisher
+$ sudo apt-get install ros-melodic-vision-msgs
+
+*************************************************************************
+ros_deep_learning
+*************************************************************************
+Next, navigate into your Catkin workspace and clone and build ros_deep_learning:
+
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/dusty-nv/ros_deep_learning
+$ cd ../
+$ catkin_make
+The inferencing nodes should now be built and ready to use.
+
+Testing
+Before proceeding, make sure that roscore is running first:
+
+$ roscore
+imageNet Node
+First, to stream some image data for the inferencing node to process, open another terminal and start an image_publisher, which loads a specified image from disk. We tell it to load one of the test images that come with jetson-inference, but you can substitute your own images here as well:
+
+$ rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/orange_0.jpg
+Next, open a new terminal, overlay your Catkin workspace, and start the imagenet node:
+
+$ source ~/catkin_ws/devel/setup.bash
+$ rosrun ros_deep_learning imagenet /imagenet/image_in:=/image_publisher/image_raw _model_name:=googlenet
+Here, we remap imagenet's image_in input topic to the output of the image_publisher, and tell it to load the GoogleNet model using the node's model_name parameter. See this table for other classification models that you can download and substitute for model_name.
+
+In another terminal, you should be able to verify the vision_msgs/Classification2D message output of the node, which is published to the imagenet/classification topic:
+
+$ rostopic echo /imagenet/classification
+detectNet Node
+Kill the other nodes you launched above, and start publishing a new image with people in it for the detectnet node to process:
+
+$ rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/peds-004.jpg 
+$ rosrun ros_deep_learning detectnet /detectnet/image_in:=/image_publisher/image_raw _model_name:=pednet
+See this table for the built-in detection models available. Here's an example of launching with the model that detects dogs:
+
+$ rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg
+$ rosrun ros_deep_learning detectnet /detectnet/image_in:=/image_publisher/image_raw _model_name:=coco-dog
+To inspect the vision_msgs/Detection2DArray message output of the node, subscribe to the detectnet/detections topic:
+
+$ rostopic echo /detectnet/detections
