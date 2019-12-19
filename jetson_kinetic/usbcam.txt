@@ -13,14 +13,27 @@ git clone https://github.com/bosch-ros-pkg/usb_cam
 
 sudo apt-get install ros-kinetic-camera-info-manager
 
+sudo apt-get install ros-kinetic-image-view
+
+cd ~/catkin_ws/
+
+catkin_make
+
 source ~/catkin_ws/devel/setup.bash
 
 rospack find usb_cam
 
-sudo apt-get install ros-kinetic-image-view
+# ~/.bashrc 에 아래 한줄을 추가하고 저장한다.
 
+source ~/catkin_ws/devel/setup.bash
+
+#터미널을 닫고 다시 띄운다.
+
+1) 터미널 1
 roscore
 
+2) 터미널 2
 roslaunch usb_cam usb_cam-test.launch
 
+3) 터미털 3
 rosrun rqt_graph rqt_graph
