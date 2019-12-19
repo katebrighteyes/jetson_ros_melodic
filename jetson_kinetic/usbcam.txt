@@ -15,6 +15,15 @@ sudo apt-get install ros-kinetic-camera-info-manager
 
 sudo apt-get install ros-kinetic-image-view
 
+# << In case video1 >>
+
+cd ~/catkin_ws/src/usb_cam
+
+grep -rn 'video0' *
+
+#Then modify the cam node number for yours.
+
+
 cd ~/catkin_ws/
 
 catkin_make
