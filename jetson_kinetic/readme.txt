@@ -1,6 +1,8 @@
 
 * kinetic 설치는 jetpack 3.3 설치 후에..
 
+$ sudo apt-get update
+
 $ git clone https://github.com/jetsonhacks/installROSTX2.git
 
 $ cd installROSTX2
