@@ -1,8 +1,6 @@
 # Install ros_melodic
 
-# Melodic for Nano
-
-설치
+## ROS melodic 설치
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
@@ -12,88 +10,43 @@ sudo apt update
 
 sudo apt install ros-melodic-desktop
 
-
-*****************************************************
-*참고 혹시 설치 관련 오류가 나면
-
-ps -ef | grep apt
-
-sudo kill [apt를 사용하는 프로세스]
-
-sudo apt install ros-melodic-desktop
-
-sudo rm /var/lib/dpkg/lock-frontend
-
-sudo rm /var/lib/dpkg/lock
-
-sudo apt install ros-melodic-desktop
-
-**********************************
-
-
-*의존성 설치 및 추가 패키지 설치
-
-sudo rosdep init 
+sudo rosdep init
 
 rosdep update
 
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc 
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 source ~/.bashrc
 
-sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
+======================================================
+##workspace 만들기
+##installcatkinws.sh 를 실행시키기 위해 권한을 바꾸고(1회) 실행시킨다.
 
+chmod 777 installcatkinws.sh
 
-최종 환경 설정
+./installcatkinws.sh
 
-mkdir catkin_ws
+##확인
+ls ~/catkin_ws
 
-cd ~/catkin_ws/
+##터미널을 닫는다.
 
-mkdir -p ~/catkin_ws/src 
-
-catkin_make
-
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc 
-
-source ~/.bashrc
-
----------------------------------------------------------------------------
-# Melodic for Xavier, TX2 (Jetpack 4.2.1)
----------------------------------------------------------------------------
-
-설치
-
-git clone https://github.com/jetsonhacks/installROSXavier.git
-
-
-cd installROSXavier/
-
-ls
-
-./installROS.sh -p ros-melodic-desktop -p ros-melodic-rgbd-launch
-
-./setupCatkinWorkspace.sh
-
-
-* 터미널을 닫는다.
-
-테스트
+# 테스트
 ======================================
-[TEST]
+##[TEST]
 
-1) EXECUTE roscore 
-창을 새로 띄운 후 roscore 실행 
+#1) EXECUTE roscore 
+##창을 새로 띄운 후 roscore 실행 
 
-$ roscore
+roscore
 
-2) turtle
-또 다른 창에서 거북이 창 실행
+#2) turtle
+##또 다른 창에서 거북이 창 실행
 
-$ rosrun turtlesim turtlesim_node
+rosrun turtlesim turtlesim_node
 
-3) move
-또 다른 창에서 키 동작 오퍼 기능 실행
+#3)move
+##또 다른 창에서 키 동작 오퍼 기능 실행
 
-$ rosrun turtlesim turtle_teleop_key
+rosrun turtlesim turtle_teleop_key
 
