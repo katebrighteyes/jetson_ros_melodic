@@ -1,0 +1,31 @@
+T : rosrun turtlebot3_bringup create_udev_rules
+
+--------------------------------------------
+<연결>
+P : roscore
+ 
+T : roslaunch turtlebot3_bringup turtlebot3_robot.launch
+
+---------------------------------------------
+<리모트에서 모니터링>
+P
+$ export TURTLEBOT3_MODEL =waffle_pi      #vi ~/.bashrc 에 위 문구를 저장한다.
+$ roslaunch turtlebot3_bringup turtlebot3_remote.launch
+
+rosrun rviz rviz -d `rospack find turtlebot3_description `/rviz/model.rviz
+
+rqt
+
+$ rqt_graph
+$ rostopic list
+$ rosnode list
+
+---------------------------------------------
+<리모트에서 제어>
+
+roslaunch turtlebot3_bringup turtlebot3_core.launch 
+ 
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+
+ 
