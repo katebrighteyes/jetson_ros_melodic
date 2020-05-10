@@ -22,9 +22,7 @@ source ~/.bashrc
 
 ##workspace 만들기
 
-##installcatkinws.sh 를 다운받아서 권한을 바꾸고(1회) 실행시킨다.
-
-wget https://github.com/katebrighteyes/jetson_ros_melodic/blob/master/installcatkinws.sh
+wget https://raw.githubusercontent.com/katebrighteyes/jetson_ros_melodic/master/install_melodic_catkinws.sh
 
 chmod 777 installcatkinws.sh
 
