@@ -24,4 +24,4 @@ catkin_make
 
 #setup ROS environment variables
 grep -q -F ' ROS_MASTER_URI' ~/.bashrc ||  echo 'export ROS_MASTER_URI=http://localhost:11311' | tee -a ~/.bashrc
-grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_IP=$(hostname -I)" | tee -a ~/.bashrc
+grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_HOSTNAME=localhost" | tee -a ~/.bashrc
