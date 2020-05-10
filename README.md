@@ -22,11 +22,9 @@ source ~/.bashrc
 
 ##workspace 만들기
 
-##installcatkinws.sh 를 실행시키기 위해 권한을 바꾸고(1회) 실행시킨다.
+##installcatkinws.sh 를 다운받아서 권한을 바꾸고(1회) 실행시킨다.
 
-gedit installcatkinws.sh
-
-##copy installcatkinws.sh file of this repository and paste to make shell scrip.
+wget https://github.com/katebrighteyes/jetson_ros_melodic/blob/master/installcatkinws.sh
 
 chmod 777 installcatkinws.sh
 
