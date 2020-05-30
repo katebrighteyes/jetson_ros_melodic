@@ -25,6 +25,11 @@ $ mv catkin_ws/ catkin_ws_1/
 $ cd ~/installROSXavier
 $ ./setupCatkinWorkspace.sh
 
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+sudo rosdep init
+rosdep update
+
 ** Check yout ~/.bashrc if there are duplicated lines.
 ** And source ~/.bashrc
 
