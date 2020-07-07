@@ -10,6 +10,8 @@ sudo apt update
 
 sudo apt install ros-melodic-desktop
 
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential 
+
 sudo rosdep init
 
 rosdep update
