@@ -24,7 +24,7 @@ source ~/.bashrc
 
 ##workspace 만들기
 
-wget https://raw.githubusercontent.com/katebrighteyes/jetson_ros_melodic/master/install_melodic_catkinws.sh
+wget https://raw.githubusercontent.com/katebrighteyes/jetson_ros_melodic/master/install_catkinws.sh
 
 chmod 777 installcatkinws.sh
 
