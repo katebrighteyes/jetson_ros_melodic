@@ -34,6 +34,15 @@ chmod 777 installcatkinws.sh
 
 ls ~/catkin_ws
 
+
+## 패지키 만들기 시작
+
+cd ~/catkin_ws/src
+
+catkin_create_pkg ros_topic_test std_msgs roscpp
+
+
+
 ##터미널을 닫는다.
 
 # 테스트
