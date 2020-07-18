@@ -21,6 +21,28 @@ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 ======================================================
+# 테스트
+
+##[TEST]
+
+#1) EXECUTE roscore 
+
+##창을 새로 띄운 후 roscore 실행 
+
+roscore
+
+#2) turtle
+##또 다른 창에서 거북이 창 실행
+
+rosrun turtlesim turtlesim_node
+
+#3)move
+##또 다른 창에서 키 동작 오퍼 기능 실행
+
+rosrun turtlesim turtle_teleop_key
+
+
+======================================
 
 ##workspace 만들기
 
@@ -45,23 +67,4 @@ catkin_create_pkg ros_topic_test std_msgs roscpp
 
 ##터미널을 닫는다.
 
-# 테스트
-======================================
-##[TEST]
-
-#1) EXECUTE roscore 
-
-##창을 새로 띄운 후 roscore 실행 
-
-roscore
-
-#2) turtle
-##또 다른 창에서 거북이 창 실행
-
-rosrun turtlesim turtlesim_node
-
-#3)move
-##또 다른 창에서 키 동작 오퍼 기능 실행
-
-rosrun turtlesim turtle_teleop_key
 
