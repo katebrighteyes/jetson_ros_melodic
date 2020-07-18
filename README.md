@@ -26,9 +26,9 @@ source ~/.bashrc
 
 wget https://raw.githubusercontent.com/katebrighteyes/jetson_ros_melodic/master/install_catkinws.sh
 
-chmod 777 installcatkinws.sh
+chmod 777 install_catkinws.sh
 
-./installcatkinws.sh
+./install_catkinws.sh
 
 ##확인
 
