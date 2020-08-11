@@ -2,28 +2,6 @@
 
 # USB CAM ROS
 
-# Kinetic #
-  
-ls -ltr /dev/video*
-
-cd catkin_ws/src
-
-git clone https://github.com/bosch-ros-pkg/usb_cam
-
-sudo apt-get install ros-indigo-camera-info-manager
-
-source ~/catkin_ws/devel/setup.bash
-
-rospack find usb_cam
-
-sudo apt-get install ros-kinetic-image-view
-
-roscore
-
-roslaunch usb_cam usb_cam-test.launch
-
-rosrun rqt_graph rqt_graph
-
 
 # Melodic #
   
@@ -35,17 +13,12 @@ git clone https://github.com/bosch-ros-pkg/usb_cam
 
 **********************
 if your usb camera is /dev/video1
-go to 70 line of this page.
+go to 54 line of this page.
 **********************
 
 cd ..
 
-sudo apt-get install ros-melodic-camera-info-manager
-
-
-sudo apt install libavcodec-dev
-
-sudo apt install libswscale-dev
+sudo apt-get install ros-melodic-camera-info-manager libavcodec-dev libswscale-dev -y
 
 catkin_make
 
@@ -94,3 +67,24 @@ usb_cam/nodes/usb_cam_node.cpp:92:    node_.param("video_device", video_device_n
 ***************************************************
 
 
+# Kinetic #
+  
+ls -ltr /dev/video*
+
+cd catkin_ws/src
+
+git clone https://github.com/bosch-ros-pkg/usb_cam
+
+sudo apt-get install ros-indigo-camera-info-manager
+
+source ~/catkin_ws/devel/setup.bash
+
+rospack find usb_cam
+
+sudo apt-get install ros-kinetic-image-view
+
+roscore
+
+roslaunch usb_cam usb_cam-test.launch
+
+rosrun rqt_graph rqt_graph
