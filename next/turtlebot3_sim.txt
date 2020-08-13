@@ -2,11 +2,6 @@
 
 ***********************
 # 1. CHECK IP
-* YOU HAVE TO Modify ~/.bashrc if yout Jetson IP is changed !!
-
-export ROS_IP=192.168.101.20 <= modify to your IP
-
-export ROS_MASTER_URI=http://192.168.101.20:11311
 
 **And you can Refer this site for this exercise if you want.**
 
