@@ -15,31 +15,21 @@ https://github.com/ROBOTIS-GIT/turtlebot3
 
 ====================================
 # 2. installation for this Exercise
-====================================
-*****************************************************
-* 2.1 prepare your catkin_ws (If you want)
-$ cd
-$ rm -rf catkin_ws/
-<< OR >>
-$ mv catkin_ws/ catkin_ws_1/
-$ cd ~/installROSXavier
-$ ./setupCatkinWorkspace.sh
-
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-
-sudo rosdep init
-rosdep update
-
-** Check yout ~/.bashrc if there are duplicated lines.
-** And source ~/.bashrc
 
 *******************************************************
+./install_catkinws.sh turtle_ws
 
-cd catkin_ws/
+cd turtle_ws/
 ********************************************************
 * 2.2 Install START *
 
-Make your setup_SimulJetson.sh.
+# Make your setup_SimulJetson.sh.
+# visit the site and make setup_SimulJetson.sh
+
+https://github.com/katebrighteyes/jetson_ros_melodic/blob/master/next/setup_SimulJetson.sh
+
+vim setup_SimulJetson.sh
+
 chmod 777 setup_SimulJetson.sh
 RUN !!
 $ ./setup_SimulJetson.sh
@@ -48,13 +38,14 @@ $ ./setup_SimulJetson.sh
 
 *2.3 Download src and build **
 
-$ cd ~/catkin_ws/src/
+$ cd ~/turtle_ws/src/
 
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
-$ cd ~/catkin_ws && catkin_make
+$ cd ~/turtle_ws
+$ catkin_make
 
 $ source ./devel/setup.bash
 
