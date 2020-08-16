@@ -1,0 +1,30 @@
+<Teleop>
+
+PC : roscore 
+
+터틀이 : roslaunch turtlebot3_bringup turtlebot3_robot.launch 
+
+PC : roslaunch turtlebot3_bringup turtlebot3_remote.launch 
+
+PC : roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+
+<SLAM>
+
+PC : roscore 
+
+터틀이 : roslaunch turtlebot3_bringup turtlebot3_robot.launch 
+
+PC : roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping 
+
+PC : roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch 
+
+<After finishing map, YOU must save map>
+
+PC : rosrun map_server map_saver -f ~/map 
+
+
+<Navi>
+
+PC : roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml 
+
