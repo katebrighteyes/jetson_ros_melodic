@@ -8,6 +8,29 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 
 sudo apt update
 
+----------------------
+if failed,,
+
+https://keyserver.ubuntu.com/
+
+input 
+0xF42ED6FBAB17C654
+
+then 
+
+click the first link
+
+and make ros.pgp
+
+
+sudo apt-key add ros.pgp
+and try like this :
+
+
+
+
+-----------------------
+
 sudo apt install ros-melodic-desktop
 
 sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential 
