@@ -22,12 +22,9 @@ click the first link
 
 and make ros.pgp
 
-
-sudo apt-key add ros.pgp
 and try like this :
 
-
-
+sudo apt-key add ros.pgp 
 
 -----------------------
 
