@@ -2,6 +2,9 @@
 
 source ~/catkin_ws/devel/setup.bash
 
-
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
+
+source ~/turtle_ws/devel/setup.bash
+
+echo "source ~/turtle_ws/devel/setup.bash" >> ~/.bashrc
