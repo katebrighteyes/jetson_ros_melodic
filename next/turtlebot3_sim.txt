@@ -21,7 +21,8 @@ cd turtle_ws/
 # Make your setup_SimulJetson.sh.
 # visit the site and make setup_SimulJetson.sh
 
-https://github.com/katebrighteyes/jetson_ros_melodic/blob/master/next/setup_SimulJetson.sh
+wget https://github.com/katebrighteyes/jetson_ros_melodic/blob/master/next/setup_SimulJetson.sh
+chmod 777 setup_SimulJetson.sh
 
 vim setup_SimulJetson.sh
 
