@@ -8,7 +8,8 @@ $ sudo chmod a+rw /dev/ttyUSB0
 
 $ cd catkin_ws/src
 
-$ git clone github.com/ROBOTIS-GIT/hls_lfcd_lds_driver
+$ git clone https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver
+
 
 $ cd ..
 
