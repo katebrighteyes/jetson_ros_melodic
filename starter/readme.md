@@ -33,13 +33,9 @@ source ~/catkin_ws/devel/setup.bash
 
 [1]
 
-$ roscore
-
-[2]
-
 $ roslaunch usb_cam usb_cam-test.launch
 
-[3]
+[2]
 
 $ rosrun rqt_graph rqt_graph
 
