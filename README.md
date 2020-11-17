@@ -88,14 +88,20 @@ catkin_create_pkg ros_topic_test std_msgs roscpp
 ##터미널을 닫는다.
 
 ..소스 작성 후
+
 cd
+
 cd catkin_ws
+
+
 catkin_make
 
 컴파일 성공 후 실행
 
 cd
+
 cd catkin_ws
+
 catkin make
 
 source ./devel/setup.bash
