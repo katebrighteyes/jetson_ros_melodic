@@ -102,7 +102,7 @@ cd
 
 cd catkin_ws
 
-catkin make
+catkin_make
 
 source ./devel/setup.bash
 
