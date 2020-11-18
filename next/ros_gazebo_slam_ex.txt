@@ -89,6 +89,22 @@ https://newscrewdriver.com/2018/08/11/running-turtlebot3-mapping-demonstration-w
 *Note: If this node failed to launch with the error ERROR: cannot launch node of type [gmapping/slam_gmapping]: gmapping it means the required module has not been installed. Install (on Ubuntu) with sudo apt install ros-melodic-slam-gmapping.
 
 -------------
+2-1
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=cartographer
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=hector
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=karto
+
+slam_methods:=xxxxx
+gmapping, cartographer, hector, karto
+
+sudo apt-get install ros-melodic-cartographer ros-melodic-cartographer-ros ros-melodic-cartographer-ros-msgs ros-melodic-cartographer-rviz
+
+sudo apt-get install ros-melodic-hector-mapping
+
+sudo apt-get install ros-melodic-slam-karto
+-------------
+
 3. turtlebot3_teleop
 
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
