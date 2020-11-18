@@ -9,7 +9,7 @@ $ export TURTLEBOT3_MODEL=${TB3_MODEL}
 
 *** but you can save this in ~/.bashrc like below
 
-export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle
 
 
 ====================================
