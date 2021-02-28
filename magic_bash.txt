@@ -1,1 +1,0 @@
-sudo sh -c 'echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc'
