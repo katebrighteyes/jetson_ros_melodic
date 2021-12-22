@@ -83,7 +83,7 @@ ls ~/catkin_ws
 
 cd ~/catkin_ws/src
 
-catkin_create_pkg ros_topic_test std_msgs roscpp
+catkin_create_pkg ros_topic_test std_msgs roscpp rospy
 
 
 
