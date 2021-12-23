@@ -55,6 +55,13 @@ export TURTLEBOT3_MODEL=burger
 or
 export TURTLEBOT3_MODEL=waffle
 
+---------------------
+
+매번 export 하기보다 이 방법을 권유드립니다. :)
+echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+
+----------------------
+
 roslaunch turtlebot3_fake turtlebot3_fake.launch
 
 -----------------------------------------
