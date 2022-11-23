@@ -18,15 +18,30 @@ catkin_make
 
 cd src/ros_turtle_test/src
 
-# 소스 작성
+# 소스 작성 1
 
 gedit my_position_test01.py
 ....
 
-# 실행
+# 실행 1
 
 chmod 777 *.py
 
 #다른 창에서 실행
 
 rosrun ros_turtle_test my_position_test01.py
+
+# 소스 작성 2 
+
+cd src/ros_turtle_test/src
+
+gedit my_goal_test.py
+....
+
+# 실행 2
+
+chmod 777 *.py
+
+#다른 창에서 실행
+
+rosrun ros_turtle_test my_goal_test.py
