@@ -8,7 +8,7 @@ catkin_make
 
 -----------------------
 
-tar xzf darknet-master.zip
+tar xzf darknet-master.tar.gz
 cd darknet-master
 
 make
