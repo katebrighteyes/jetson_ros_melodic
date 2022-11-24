@@ -1,3 +1,9 @@
+다운로드 받으세요.
+
+https://drive.google.com/file/d/16UI2o5yJvAoTNG4kFfrD4dXNMDyh38eF/view?usp=sharing
+
+https://drive.google.com/file/d/1TPK-xJ-1q3v0r8tBKSjOJPOj1DQm6kuZ/view?usp=sharing
+
 패키지 생성
 
 cd ~/catkin_ws/src
@@ -5,6 +11,8 @@ catkin_create_pkg ros_darknet_test std_msgs roscpp rospy
 cd
 cd catkin_ws
 catkin_make
+
+현재 ros_darknet_test 폴더 아래에 다운로드 받은 ros_darknet_test 패키지 폴더에서 src 와 yolo 폴더를 복사해오세요.
 
 -----------------------
 
@@ -18,7 +26,7 @@ libdarknet.so 를 ros_darknet_test/src 폴더에 복사
 -----------------------
 cd ~/catkin_ws/src/ros_turtle_test/src
 
-ros_darknet_test2.py 소스작성
+ros_darknet_test2.py 소스작성 (아까 복사했으므로 그냥 확인)
 
 -----------------------------------
 실행
