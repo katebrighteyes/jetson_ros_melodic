@@ -26,11 +26,6 @@ ros_darknet_test2.py 소스작성
 roscore
 
 <new window>
-source ~/cvbridge_build_ws/devel/setup.bash
-rosrun ros_cam_test camera_pub.py
-
-
-<new window>
 
 source ~/cvbridge_build_ws/devel/setup.bash
 
