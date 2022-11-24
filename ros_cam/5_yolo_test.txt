@@ -26,7 +26,7 @@ make
 libdarknet.so 를 ros_darknet_test/src 폴더에 복사
 
 -----------------------
-cd ~/catkin_ws/src/ros_turtle_test/src
+cd ~/catkin_ws/src/ros_darknet_test/src
 
 ros_darknet_test2.py 소스작성 (아까 복사했으므로 그냥 확인)
 
