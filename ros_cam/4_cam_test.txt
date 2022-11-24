@@ -17,7 +17,6 @@ source ~/cvbridge_build_ws/devel/setup.bash
 rosrun ros_cam_test camera_pub.py
 
 <new window>
-pip3 install netifaces
 source ~/cvbridge_build_ws/devel/setup.bash
 rosrun ros_cam_test camera_sub.py
 
