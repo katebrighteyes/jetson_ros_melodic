@@ -1,7 +1,5 @@
 다운로드 받으세요.
 
-https://drive.google.com/file/d/16UI2o5yJvAoTNG4kFfrD4dXNMDyh38eF/view?usp=sharing
-
 https://drive.google.com/file/d/1TPK-xJ-1q3v0r8tBKSjOJPOj1DQm6kuZ/view?usp=sharing
 
 패키지 생성
@@ -15,6 +13,10 @@ catkin_make
 현재 ros_darknet_test 폴더 아래에 다운로드 받은 ros_darknet_test 패키지 폴더에서 src 와 yolo 폴더를 복사해오세요.
 
 -----------------------
+
+다운로드 받으세요.
+
+https://drive.google.com/file/d/16UI2o5yJvAoTNG4kFfrD4dXNMDyh38eF/view?usp=sharing
 
 tar xzf darknet-master.tar.gz
 cd darknet-master
