@@ -1,0 +1,29 @@
+패키지 생성
+
+cd ~/catkin_ws/src
+
+catkin_create_pkg ros_cam_test std_msgs roscpp rospy
+
+cd ~/catkin_ws/src/ros_cam_test/src
+
+camera_pub.py, camera_sub.py 소스작성
+------------------------------
+실행
+
+roscore
+
+<new window>
+source ~/cvbridge_build_ws/devel/setup.bash
+rosrun ros_cam_test camera_pub.py
+
+<new window>
+pip3 install netifaces
+source ~/cvbridge_build_ws/devel/setup.bash
+rosrun ros_cam_test camera_sub.py
+
+
+
+
+
+
+

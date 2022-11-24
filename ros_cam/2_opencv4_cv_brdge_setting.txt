@@ -1,0 +1,20 @@
+-- Found OpenCV: /usr (found version "4.1.1")
+CMake Error at /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake:113 (message):
+
+==>
+
+$ pkg-config --cflags opencv4
+
+-I/usr/include/opencv4/opencv -I/usr/include/opencv4
+
+
+$ sudo vim  /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake
+
+95 line
+
+
+if(NOT "include;/usr/include;/usr/include/opencv " STREQUAL " ")
+  set(cv_bridge_INCLUDE_DIRS "")
+  #set(_include_dirs "include;/usr/include;/usr/include/opencv")
+  set(_include_dirs "include;/usr/include/opencv4/opencv2;/usr/include/opencv4")
+
