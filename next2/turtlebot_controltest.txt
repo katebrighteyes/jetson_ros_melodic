@@ -2,6 +2,9 @@
 
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
+# 실제 터틀봇은
+roslaunch turtlebot3_bringup turtlebot3_robot.launch
+
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 
 # 패키지 생성
