@@ -1,3 +1,18 @@
 sudo apt install python3-pip 
 
 #!/usr/bin/env python3
+
+
+확인방법
+
+python3
+
+입력 후 python 프롬프트로 변한 후
+
+import rospy
+
+import rospkg
+
+입력하여 에러가 나지 않는지 확인
+
+확인후 Ctl-D 입력하여 빠져나옴.
