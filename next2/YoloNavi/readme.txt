@@ -50,5 +50,13 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 rosrun ros_darknet_test my_goal_test2.py 
 
 8. darknet test 실행
+
+source ~/cvbridge_build_ws/devel/setup.bash
 rosrun ros_darknet_test ros_darknet_test3.py
+
+(혹시 안되면)
+cd ~/cvbridge_build_ws
+source install/setup.bash --extend
+rosrun ros_darknet_test ros_darknet_test3.py
+
 
