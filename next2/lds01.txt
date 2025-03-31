@@ -12,7 +12,7 @@ pip install ultralytics==8.3.0
 
 예제들 찾았다
 
-DeepLearning4Projects/Chap7/YOLOv11 at main · jetsonai/DeepLearning4Projects
+https://github.com/jetsonai/DeepLearning4Projects/tree/main/Chap7/YOLOv11 
 
 
 
