@@ -1,5 +1,10 @@
 sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -e=QT_X11_NO_MITSHM=1 --ipc=host -it -d --net=host -v /dev/snd:/dev/snd --volume=/docker_job:/docker_job --volume=/home/nvidia:/mnt --volume=/tmp/.X11-unix:/tmp/.X11-unix -v /dev/shm:/dev/shm -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket -v /tmp/argus_socket:/tmp/argus_socket -v /dev/:/dev/ --runtime=nvidia ultralytics/ultralytics:8.3.23-jetson-jetpack4
 
+==============================
+
+sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -e=QT_X11_NO_MITSHM=1 --ipc=host -it -d --net=host -v /dev/snd:/dev/snd -v /dev:/dev -v /dev/shm:/dev/shm -v /tmp/argus_socket:/tmp/argus_socket --volume=/docker_job:/docker_job --volume=/home/nvidia:/mnt --volume=/tmp/.X11-unix:/tmp/.X11-unix --runtime=nvidia ultralytics/ultralytics:8.3.23-jetson-jetpack4
+
+
 https://elinux.org/Jetson_Zoo#ONNX_Runtime
 
 https://elinux.org/Jetson_Zoo#ONNX_Runtime
