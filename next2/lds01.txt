@@ -4,6 +4,29 @@ sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -
 
 sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -e=QT_X11_NO_MITSHM=1 --ipc=host -it -d --net=host -v /dev/snd:/dev/snd -v /dev:/dev -v /dev/shm:/dev/shm -v /tmp/argus_socket:/tmp/argus_socket --volume=/docker_job:/docker_job --volume=/home/nvidia:/mnt --volume=/tmp/.X11-unix:/tmp/.X11-unix --runtime=nvidia ultralytics/ultralytics:8.3.23-jetson-jetpack4
 
+============================
+sudo docker pull timongentzsch/l4t-ubuntu20-ros2-desktop:latest
+
+sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -e=QT_X11_NO_MITSHM=1 --ipc=host -it -d --net=host -v /dev/snd:/dev/snd -v /dev:/dev -v /dev/shm:/dev/shm -v /tmp/argus_socket:/tmp/argus_socket --volume=/docker_job:/docker_job --volume=/home/nvidia:/data --volume=/tmp/.X11-unix:/tmp/.X11-unix --runtime=nvidia timongentzsch/l4t-ubuntu20-ros2-desktop:latest
+
+alias DTR="sudo docker restart DOCKER_2004_RSAEM"
+alias DTA="sudo docker exec -i -t  DOCKER_2004_RSAEM /bin/bash"
+
+<install this first to check something>
+
+apt install vim x11-apps usbutils   ( host must do :      sudo xhost + )
+
+===================================
+    6  pip3 list | grep torch
+    7  pip3 install torch-1.11.0-cp38-cp38-linux_aarch64.whl 
+    8  pip3 install torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl 
+    9  python3
+   10  apt-get install libopenblas-dev 
+   11  ldconfig
+
+print(torch.cuda.is_available())
+python3 cnn_mnist.py
+=============================================
 python3 -c 'import cv2; print(cv2.getBuildInformation())'
 
 설치된 OpenCV 삭제
@@ -54,24 +77,28 @@ cmake -D CMAKE_BUILD_TYPE=Release \
 make install
 
 ldconfig
+===================================
+onnxruntime 1.8.0 
 
-https://elinux.org/Jetson_Zoo#ONNX_Runtime
+pip3 install onnxruntime_gpu-1.8.0-cp38-cp38-linux_aarch64.whl
 
-https://elinux.org/Jetson_Zoo#ONNX_Runtime
-
-onnxruntime 1.8.0 이었던거 같네.. 
 
 https://pypi.org/project/ultralytics/8.3.0/
 
 pip install ultralytics==8.3.0
 
-도커에 opencv 3.8 을 설치했지만 나머지 문제들 때문에 실행에 성공하지 못했고
+도커에 opencv 3.8 을 설치
 
-예제들 찾았다
+ADD https://forums.developer.nvidia.com/uploads/short-url/hASzFOm9YsJx6VVFrDW1g44CMmv.whl tensorrt-8.2.0.6-cp38-none-linux_aarch64.whl # buildkit
+
+pip3 install tensorrt-8.2.0.6-cp38-none-linux_aarch64.whl 
+
+   74  pip3 uninstall numpy
+   75  pip3 install numpy==1.23.5
 
 https://github.com/jetsonai/DeepLearning4Projects/tree/main/Chap7/YOLOv11 
 
-
+=================================
 
 LDS-01
 $ ls -l /dev/ttyUSB0
