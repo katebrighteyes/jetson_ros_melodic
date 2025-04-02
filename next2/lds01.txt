@@ -6,6 +6,22 @@ sudo docker run --privileged --name DOCKER_ULTRA_NANOC -e DISPLAY=unix$DISPLAY -
 
 python3 -c 'import cv2; print(cv2.getBuildInformation())'
 
+설치된 OpenCV 삭제
+sudo apt-get purge libopencv* python-opencv
+
+2. Setting Swap !!
+
+3. modify   1. wisper.cpp jetson nano 설치
+cd /usr/local/cuda-10.2/include/crt
+sudo vi host_config.h
+
+4. /OpenCV-4-8-0.sh
+
+5. don't forget 
+
+make install
+
+ldconfig
 
 https://elinux.org/Jetson_Zoo#ONNX_Runtime
 
