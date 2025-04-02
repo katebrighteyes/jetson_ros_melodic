@@ -16,6 +16,38 @@ cd /usr/local/cuda-10.2/include/crt
 sudo vi host_config.h
 
 4. /OpenCV-4-8-0.sh
+cmake -D CMAKE_BUILD_TYPE=Release \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-10.2 \
+      -D CUDA_ARCH_BIN=5.3,6.2,7.2 \
+      -D CUDA_ARCH_PTX=  \
+      -D CUDA_FAST_MATH=ON  \
+      -D CUDNN_VERSION='8.0'  \
+      -D EIGEN_INCLUDE_PATH=/usr/include/eigen3 \
+      -D ENABLE_NEON=ON  \
+      -D OPENCV_DNN_CUDA=OFF  \
+      -D OPENCV_ENABLE_NONFREE=ON \
+      -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-4.6.0/modules \
+      -D WITH_CUDA=ON \
+      -D WITH_TBB=ON \
+      -D WITH_V4L=ON \
+      -D WITH_LIBV4L=ON \
+      -D WITH_OPENGL=ON \
+      -D WITH_OPENMP=ON \
+      -D WITH_FFMPEG=ON \
+      -D WITH_GSTREAMER=ON \
+      -D WITH_GSTREAMER_0_10=OFF \
+      -D BUILD_opencv_python3=ON \
+      -D BUILD_opencv_python2=OFF \
+      -D BUILD_opencv_java=OFF \
+      -D BUILD_opencv_js=OFF \
+      -D OPENCV_ENABLE_NONFREE=ON \
+      -D BUILD_EXAMPLES=ON \
+      -D WITH_ONNX=ON \
+      -D ONNXRT_ROOT_DIR=/usr/local \
+      -D ONNX_RUNTIME_LIBDIR=/usr/local/lib \
+      -D ONNX_RUNTIME_INCLUDE_DIR=/usr/local/include \
+      ..
 
 5. don't forget 
 
